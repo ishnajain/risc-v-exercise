@@ -1,7 +1,9 @@
-volatile int a=0;
+extern void update_vector();
+extern int bootstrap();
 int main()
-{     //  extern int bootstrap();
-      //    bootstrap();
+{       update_vector();
+	bootstrap();
+	asm volatile("ecall");
 	return 0;
 }
 
