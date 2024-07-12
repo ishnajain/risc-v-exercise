@@ -2,7 +2,7 @@
 .global ex1
 .type ex1, "function"
 ex1:
-	li	gp, 0x80000000
+	li	gp, 0x80000004
 	la	t0, ex_handler
 	csrw	mtvec, t0
 	nop
@@ -23,3 +23,7 @@ ex_handler:
 	csrr	a0, mcause
 	wfi
 	j	ex_handler
+#	csrr	t0, mepc
+#	addi	t0,t0,4
+#	csrw	mepc, t0
+#	mret

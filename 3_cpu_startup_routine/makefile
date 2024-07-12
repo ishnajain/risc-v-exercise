@@ -21,7 +21,7 @@ OD	:= $(TC)objdump
 
 CFLAGS  := -g -Werror -Wall -I./inc -march=rv32i -mabi=ilp32
 LDFLAGS	:= -dT section.ld -b elf32-littleriscv
-ASFLAGS	:= -march=rv32ic -mabi=ilp32 -D -g
+ASFLAGS	:= -march=rv32i -mabi=ilp32 -D -g -I./inc
 #$(info $(SRC))
 default : $(ELF)
 
