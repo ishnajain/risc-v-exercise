@@ -13,6 +13,9 @@
 
 - [ ] Configure exception handling in both supported modes 
 - [ ] Add UART support
+    - [ ] Add UART enable
+    - [ ] Add UART baud rate setup
+    - [ ] Add UART TX
 
 ### DONE ✓
  - [x] Minimal startup routine
