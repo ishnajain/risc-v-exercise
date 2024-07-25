@@ -12,6 +12,7 @@ SOBJ	:= $(addprefix $(OUT)/,$(SOBJ:.S=.o))
 OBJ	:= $(COBJ) $(SOBJ)
 #OBJ	:= $(wildcard $(SRC)/*.c $(SRC)/*.S)
 #OBJ	:= $(addprefix $(OUT)/,$(OBJ:.*=.o)) 
+LDSCRIPT?= ../section.ld 
 
 TC	:= ../../cyancore/tools/risc-v-toolchain/bin/riscv64-unknown-elf-
 LD	:= $(TC)ld 
@@ -20,7 +21,7 @@ CC	:= $(TC)gcc
 OD	:= $(TC)objdump
 
 CFLAGS  := -g -Werror -Wall -fno-builtin -I./inc -march=rv32i -mabi=ilp32 
-LDFLAGS	:= -dT ../section.ld -b elf32-littleriscv
+LDFLAGS	:= -dT $(LDSCRIPT) -b elf32-littleriscv
 ASFLAGS	:= -march=rv32i -mabi=ilp32 -D -g -I./inc
 #$(info $(SRC))
 default : $(ELF)
