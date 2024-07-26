@@ -1,17 +1,14 @@
 # RISC-V from ground up 
 
 ### TODO
-- [ ] Configure exception handling in both supported modes
-- [ ] Add timer support
-- [ ] Port the system to IBEX
-- [ ] Add CLINT engine
 - [ ] Add coremark support
 - [ ] Add PLIC engine
 
 ### In PROGRESS
 
 - [ ] Configure exception handling in both supported modes
-- [ ] Port code to ibex 
+- [ ] Add timer support for ibex
+- [ ] Add CLINT engine for ibex
 
 
 ### DONE ✓
@@ -24,3 +21,4 @@
     - [x] Add UART enable
     - [x] Add UART baud rate setup
     - [x] Add UART TX
+- [x] Port code to ibex 
