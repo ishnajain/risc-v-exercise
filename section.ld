@@ -2,8 +2,8 @@ MEMORY
 {
   /*rom (irx!wa): ORIGIN = 0x1000, LENGTH = 1K
   ram (arwx!i): ORIGIN = 0x80000000, LENGTH = 1K*/
-	lma_mem(r!ixwa)  : ORIGIN = 0x1000,	  LENGTH = 1K  
-	vma_imem(rxa!wi) : ORIGIN = 0x1000,	  LENGTH = 1K
+	lma_mem(r!ixwa)  : ORIGIN = 0x1000,	  LENGTH = 8K  
+	vma_imem(rxa!wi) : ORIGIN = 0x1000,	  LENGTH = 8K
 	vma_dmem(wai!xr) : ORIGIN = 0x80000000, LENGTH = 4K
 
 }
