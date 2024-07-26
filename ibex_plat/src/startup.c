@@ -1,4 +1,6 @@
 #include <lib_string.h>
+#include <hal_timer.h>
+
 extern uintptr_t _bss_start, _bss_size;
 
 int bss_clear()
@@ -10,6 +12,7 @@ int bss_clear()
 int bootstrap()
 {
 	bss_clear();
+	timer_start();
 	return 0;
 }
 
